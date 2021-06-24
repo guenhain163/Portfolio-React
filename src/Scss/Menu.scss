@@ -1,0 +1,148 @@
+.page {
+  position: relative;
+  height: 100%;
+}
+
+.pg-navbar.active {
+  left: 0;
+}
+
+// Page
+.pg-navbar {
+  position: fixed;
+  width: 10rem;
+  height: 100%;
+  background-color: $navy;
+  color: $white;
+  z-index: 10;
+  left: 0;
+  -webkit-transition: left .66s ease-in-out;
+  -moz-transition: left .66s ease-in-out;
+  -o-transition: left .66s ease-in-out;
+  -ms-transition: left .66s ease-in-out;
+  transition: left .66s ease-in-out;
+
+  .pg-container {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    max-width: 100%;
+    outline: 0;
+    direction: ltr;
+  }
+
+  .my-photo {
+    position: relative;
+    margin: 25px auto 10px;
+    max-width: 80px;
+    text-align: center;
+    z-index: 0;
+    will-change: transform;
+    transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+
+    img {
+      position: relative;
+      border: 2px solid $white;
+      cursor: pointer;
+    }
+  }
+
+  .pg-title {
+    color: $white;
+    @include font-size(24, 36, 1.2);
+    @include font-weight(normal);
+    margin: 0;
+    position: relative;
+    z-index: 1;
+    margin: 15px 20px 5px;
+    text-align: center;
+  }
+
+  .pg-main-menu {
+    padding: 0;
+
+    li:first-child {
+      border-top: 1px solid rgba(255, 255, 255, .12);
+    }
+
+    li {
+      display: block;
+      position: relative;
+      padding: 0;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, .12);
+
+      &.active a,
+      a:hover {
+        opacity: 1 !important;
+        background-color: transparent;
+
+        &:after {
+          width: 5px !important;
+        }
+      }
+
+      .nav-link {
+        display: block;
+        padding: 1rem 2rem;
+        text-align: center;
+        @include font-weight(normal);
+        position: relative;
+        text-decoration: none;
+        outline: none;
+        color: $white !important;
+        @include font-size(16);
+        opacity: 0.6;
+
+        svg {
+          display: block;
+          @include font-size(24);
+          margin: 5px auto;
+          color: $text-header-color;
+        }
+
+        &:after {
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          content: '';
+          width: 0;
+          height: 100%;
+          margin: 0 auto;
+          background-color: $light-blue;
+          -webkit-transition: all .2s ease-in-out;
+          -moz-transition: all .2s ease-in-out;
+          -o-transition: all .2s ease-in-out;
+          -ms-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+        }
+
+        &:hover {
+          color: $light-blue !important;
+          background-color: $navy-dark !important;
+
+          svg {
+            color: $light-blue !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width:991px) {
+  .pg-navbar {
+    width: 100%;
+    max-width: 320px;
+    height: 100%;
+    top: 0;
+    left: -320px;
+    z-index: 11;
+    -webkit-transition: left .66s ease-in-out;
+    -moz-transition: left .66s ease-in-out;
+    -o-transition: left .66s ease-in-out;
+    -ms-transition: left .66s ease-in-out;
+    transition: left .66s ease-in-out;
+  }
+}

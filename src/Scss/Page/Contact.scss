@@ -1,0 +1,73 @@
+// Form input
+.input-block {
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+
+  label {
+    padding: 0 10px;
+    color: #fff;
+    top: 20px;
+    display: block;
+    @include font-weight(book);
+    @include font-size(19.2);
+
+    span {
+      color: red;
+      @include font-weight(book);
+    }
+  }
+
+  .form-control {
+    background-color: $white;
+    border: 2px solid $light-blue;
+    border-radius: 0;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 25px;
+    box-shadow: none;
+    color: $navy;
+    font: 1.2rem/1.5 'Nunito', sans-serif;
+    z-index: 2;
+    width: 100%;
+    outline: none;
+
+    &:focus {
+      color: $navy;
+      outline: none;
+      box-shadow: none;
+    }
+
+    &:focus label {
+      top: 0;
+    }
+  }
+
+  textarea.form-control {
+    resize: none;
+    height: 92px;
+    overflow-y: hidden;
+  }
+}
+
+.btn-contact {
+  margin: 30px 0 0;
+}
+
+// Button
+// Button
+.btn {
+  background: $navy;
+  color: #fff !important;
+  border: 2px solid $light-blue !important;
+  font-size: 16px !important;
+  padding: 10px 20px !important;
+  outline: none;
+  border-radius: 0 !important;
+
+  &:hover {
+    color: #fff;
+    background: $light-blue !important;
+  }
+}

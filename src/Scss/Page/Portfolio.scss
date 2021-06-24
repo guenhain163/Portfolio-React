@@ -1,0 +1,51 @@
+// Grid Imafe 
+.group-hover {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+	}
+
+	.group-hover-bt {
+		width: 0;
+		position: absolute;
+		height: .125rem;
+		margin-top: -.25rem;
+		background-color: $light-blue;
+	}
+
+	img,
+	.group-hover-bt {
+		transition-property: all;
+		transition-duration: .3s;
+		transition-timing-function: cubic-bezier(0, 0, .2, 1);
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.05);
+		}
+
+		.group-hover-bt {
+			width: 100% !important;
+		}
+	}
+}
+
+#pt-wrapper-4 {
+
+	.section-body {
+		display: flex;
+
+	}
+}
+
+@media (min-width: 576px) {
+	.float-md-start {
+		float: left !important;
+	}
+
+	.float-md-end {
+		float: right !important;
+	}
+}

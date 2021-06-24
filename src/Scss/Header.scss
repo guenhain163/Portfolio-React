@@ -1,0 +1,42 @@
+.mobile-header {
+
+	.mobile-logo-container {
+		position: absolute;
+		top: 13px;
+		left: 20px;
+		color: #242e42 !important;
+		font-weight: bolder;
+		text-transform: uppercase;
+		z-index: 10;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.menu-toggle {
+		display: block;
+		width: 50px;
+		margin: 0 4px;
+		line-height: 50px;
+		height: 50px;
+		text-align: center;
+		cursor: pointer;
+		color: #242e42 !important;
+		border: 0;
+		background-color: transparent;
+		border-radius: 50%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 10;
+
+		svg {
+			@include font-size(24);
+			vertical-align: middle;
+		}
+
+	}
+}
+
+@media screen and (max-width:991px) {}

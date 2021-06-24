@@ -1,0 +1,139 @@
+@font-face {
+	font-family: Gilroy-Bold;
+	src: url(../../font/Gilroy-Heavy.ttf);
+}
+
+#pt-wrapper-1 {
+	.section-header {
+		text-align: left;
+		width: fit-content;
+		margin: auto;
+	}
+
+	.subpage {
+		background-color: transparent;
+		box-shadow: none;
+		position: relative;
+
+		.section-inner {
+			.slide-block {
+				overflow: hidden;
+				height: 12rem;
+			}
+
+			.text-block:last-child {
+				display: flex;
+				position: relative;
+			}
+
+			span {
+				font-family: "Gilroy-Bold" !important;
+				@include font-size(192, 192);
+				font-weight: 900;
+				margin: 0;
+				color: $navy;
+				position: relative;
+			}
+
+			.circle {
+				width: 3rem;
+				height: 3rem;
+				background-color: #ff5851;
+				border-radius: 50%;
+				margin-bottom: 1.5rem;
+				margin-top: auto;
+			}
+		}
+
+		.section-body {
+
+			p {
+				@include font-size(24);
+				@include font-weight(book);
+				margin: 0 6rem;
+				text-align: center;
+			}
+		}
+	}
+
+	.table {
+		display: table;
+		table-layout: fixed;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		margin: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.pageColor {
+		position: absolute;
+		background-color: #414a6b;
+		width: 100%;
+		height: 0;
+		bottom: 0;
+		z-index: 0;
+		transition: height 0.3s ease-in-out;
+	}
+
+}
+
+@media only screen and (min-width: 992px) {
+	.section-inner {
+		height: 100%;
+		display: table-cell;
+		table-layout: fixed;
+		vertical-align: middle;
+	}
+}
+
+
+@media only screen and (max-width: 991px) {
+	#pt-wrapper-1 {
+		padding: 0 3rem !important;
+		top: 50px;
+		bottom: 3rem;
+
+		.subpage {
+			.section-inner {
+				margin-top: calc(0.75 * 12rem);
+			}
+
+			.section-body {
+				p {
+					text-align: left;
+				}
+			}
+		}
+
+		.pageColor {
+			height: 50% !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	#pt-wrapper-1 {
+		padding: 0 !important;
+		bottom: 0;
+
+		.section-header {
+			margin: 0 5rem;
+		}
+
+		.subpage {
+			margin: 0;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	#pt-wrapper-1 .section-header {
+		margin: 0 20px;
+	}
+
+	#pt-wrapper-1 .subpage .section-body p {
+		margin: 0 30px;
+	}
+}

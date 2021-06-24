@@ -1,0 +1,61 @@
+.my-photo img {
+	cursor: pointer;
+}
+
+// List-inf
+.list-inf {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding-bottom: 12px;
+
+		.inf-title {
+			border-bottom: 2px solid $light-blue !important;
+			@include font-weight(bold);
+			margin-right: 10px;
+		}
+
+		.inf-value {
+			@include font-weight(light);
+
+			a,
+			a:hover {
+				color: $light-blue !important;
+				text-decoration: none;
+			}
+		}
+	}
+}
+
+// List-socail
+.social-links {
+	list-style: none;
+	margin-top: 30px;
+	padding: 0;
+
+	li {
+		display: inline-block;
+		padding: 0;
+		margin: 0;
+	}
+
+	.btn-social {
+		display: inline-block;
+		margin: 0 1px;
+		width: 36px;
+		height: 36px;
+		color: #e5e5e5;
+		background-color: transparent;
+		border: 1px solid #555;
+		text-align: center;
+		line-height: 34px;
+
+		&:hover {
+			background-color: $light-blue;
+		}
+	}
+}
+
+@media only screen and (max-width: 576px) {}

@@ -1,0 +1,97 @@
+@-webkit-keyframes moveFromRight {
+	from { -webkit-transform: translateX(100vw); }
+	to { -webkit-transform: translateX(0%); }
+}
+@keyframes moveFromRight {
+	from { -webkit-transform: translateX(100%); transform: translateX(100vw); }
+	to { -webkit-transform: translateX(0%); transform: translateX(0%); }
+}
+
+@-webkit-keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100vw); }
+	to { -webkit-transform: translateX(0%); }
+}
+@keyframes moveFromLeft {
+	from { -webkit-transform: translateX(-100vw); transform: translateX(-100vw); }
+	to { -webkit-transform: translateX(0%); transform: translateX(0%); }
+}
+@-webkit-keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100vh); }
+	to {-webkit-transform: translateY(0);}
+}
+@keyframes moveFromBottom {
+	from { -webkit-transform: translateY(100vh); transform: translateY(100vh); }
+	to { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@-webkit-keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100vh); }
+	to {-webkit-transform: translateY(0);}
+}
+@keyframes moveFromTop {
+	from { -webkit-transform: translateY(-100vh); transform: translateY(-100vh); }
+	to { -webkit-transform: translateY(0); transform: translateY(0); }
+}
+
+@-webkit-keyframes scaleDown {
+	from { }
+	to { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleDown {
+	from { }
+	to { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+@-webkit-keyframes scaleUp {
+	from { opacity: 0; -webkit-transform: scale(.8); }
+}
+@keyframes scaleUp {
+	from { opacity: 0; -webkit-transform: scale(.8); transform: scale(.8); }
+}
+@-webkit-keyframes scaleUpDown {
+	0% { opacity: .0; -webkit-transform: scale(1); transform: scale(1); }
+	15% { opacity: .3; -webkit-transform: scale(1.2); transform: scale(1.2); }
+}
+@keyframes scaleUpDown {
+	0% { opacity: .0; -webkit-transform: scale(1); transform: scale(1); }
+	15% { opacity: .3; -webkit-transform: scale(1.2); transform: scale(1.2); }
+}
+
+.pt-page-moveFromLeft {
+	-webkit-animation: moveFromLeft .6s ease both;
+	animation: moveFromLeft .6s ease both;
+}
+
+.pt-page-moveFromRight {
+	-webkit-animation: moveFromRight .6s ease both;
+	animation: moveFromRight .6s ease both;
+}
+
+.pt-page-moveFromBottom {
+	-webkit-animation: moveFromBottom .6s ease both;
+	animation: moveFromBottom .6s ease both;
+}
+
+.pt-page-moveFromTop {
+	-webkit-animation: moveFromTop .6s ease both;
+	animation: moveFromTop .6s ease both;
+}
+
+.pt-page-scaleDown {
+	-webkit-animation: scaleDown .7s ease both;
+	animation: scaleDown .7s ease both;
+}
+
+.pt-page-scaleUp {
+	opacity: 1!important;
+	-webkit-animation: scaleUp .7s ease both;
+	animation: scaleUp .7s ease both;
+}
+
+.pt-page-scaleUpDown {
+	opacity: 1!important;
+	-webkit-animation: scaleUpDown .7s ease both;
+	animation: scaleUpDown .7s ease both;
+}
+.pt-page-ontop {
+	z-index: 999;
+}

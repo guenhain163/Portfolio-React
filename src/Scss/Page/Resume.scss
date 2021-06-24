@@ -1,0 +1,127 @@
+// TIMELINE
+.block-title h3 {
+	display: inline-block;
+	position: relative;
+	margin: 0 0 20px !important;
+	padding: 0;
+	line-height: 1.5 !important;
+
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 2px;
+		height: 100%;
+		left: -10px;
+		bottom: 0;
+		background-color: $light-blue;
+	}
+}
+
+.timeline {
+	position: relative;
+	padding-bottom: 10px;
+
+	.timeline-event {
+		position: relative;
+		padding-left: 20px;
+		padding-bottom: 20px;
+
+		&>* {
+			display: block;
+		}
+
+		.event-date {
+			display: inline-block;
+			position: relative;
+			color: $white;
+			@include font-weight(book);
+			line-height: 1.1rem;
+			margin: 0 0 3px;
+			background-color: $light-blue;
+			padding: 5px 8px 5px 20px;
+			margin-left: -20px;
+		}
+
+		.event-name {
+			margin: 10px 0 0 !important;
+			line-height: 1.5;
+		}
+
+		.event-description {
+			color: $gray-500;
+			margin: 0 0 4px;
+			@include font-size(12, 24);
+			@include font-weight(light);
+		}
+
+		p {
+			@include font-size(14);
+			margin: 0 0 10px;
+			@include font-weight(light);
+		}
+	}
+}
+
+// Skills inf
+.skills-info {
+	margin-bottom: 30px;
+
+	h4 {
+		@include font-size(12.8, 14.08);
+		position: relative;
+		margin: 0 0 5px;
+	}
+
+	.skill-container {
+		background-color: transparent;
+		border: 1px solid $gray-800;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		height: 12px;
+		margin-bottom: 12px;
+		width: 100%;
+	}
+
+	.skill-percentage {
+		background-color: $light-blue;
+		border: 1px solid $white;
+		height: 10px;
+		padding: 0;
+	}
+}
+
+.skill-percentage {
+	&.skill-1 {
+		width: 64%;
+	}
+
+	&.skill-2 {
+		width: 60%;
+	}
+
+	&.skill-3 {
+		width: 45%;
+	}
+
+	&.skill-4 {
+		width: 48%;
+	}
+
+	&.skill-5 {
+		width: 85%;
+	}
+
+	&.skill-6 {
+		width: 25%;
+	}
+
+	&.skill-7 {
+		width: 30%;
+	}
+
+	&.skill-8 {
+		width: 35%;
+	}
+}
